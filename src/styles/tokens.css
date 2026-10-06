@@ -1,0 +1,212 @@
+/*
+ * Design tokens — "Luminous Engineering".
+ *
+ * Cada variável dentro de @theme vira uma utility do Tailwind
+ * (--color-brand-cyan → bg-brand-cyan, text-brand-cyan, border-brand-cyan...).
+ * Os componentes usam SOMENTE estes nomes. Para mudar a identidade visual,
+ * altere os valores aqui (e o espelho em tokens.ts) — nenhum componente precisa mudar.
+ */
+
+@theme {
+  /* A paleta padrão do Tailwind é removida: só os tokens abaixo existem. */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ── Marca ─────────────────────────────────────────────── */
+  --color-brand-cyan: #00d2ff;
+  --color-brand-violet: #a855f7;
+  --color-brand-blue: #3b82f6;
+  --color-brand-sky: #38bdf8;
+
+  /* ── Superfícies (níveis de elevação) ─────────────────── */
+  --color-canvas: #070913; /* Nível 0 — fundo */
+  --color-card: #0d111d; /* Nível 1 — vidro/cards */
+  --color-card-hover: #141b2d; /* Nível 2 — hover/ativo */
+  --color-code: #05070d;
+  --color-field: #0a0e18;
+
+  /* ── Texto ─────────────────────────────────────────────── */
+  --color-foreground: #f1f5f9;
+  --color-muted-foreground: #94a3b8;
+  --color-subtle-foreground: #64748b;
+
+  /* ── Linhas e foco ─────────────────────────────────────── */
+  --color-border: rgb(255 255 255 / 0.08);
+  --color-border-strong: rgb(255 255 255 / 0.12);
+  --color-border-field: rgb(255 255 255 / 0.1);
+  --color-ring: #00d2ff;
+
+  /* ── Paleta tonal (Material 3) ─────────────────────────── */
+  --color-surface: #11131d;
+  --color-surface-dim: #11131d;
+  --color-surface-bright: #373944;
+  --color-surface-container-lowest: #0b0e18;
+  --color-surface-container-low: #191b26;
+  --color-surface-container: #1d1f2a;
+  --color-surface-container-high: #272935;
+  --color-surface-container-highest: #323440;
+  --color-on-surface: #e1e1f1;
+  --color-on-surface-variant: #bbc9cf;
+  --color-inverse-surface: #e1e1f1;
+  --color-inverse-on-surface: #2e303b;
+  --color-outline: #859399;
+  --color-outline-variant: #3c494e;
+  --color-surface-tint: #47d6ff;
+  --color-primary: #a5e7ff;
+  --color-on-primary: #003543;
+  --color-primary-container: #00d2ff;
+  --color-on-primary-container: #00566a;
+  --color-inverse-primary: #00677f;
+  --color-secondary: #ddb7ff;
+  --color-on-secondary: #490080;
+  --color-secondary-container: #6f00be;
+  --color-on-secondary-container: #d6a9ff;
+  --color-tertiary: #d0ddff;
+  --color-on-tertiary: #002e6a;
+  --color-tertiary-container: #a5c1ff;
+  --color-on-tertiary-container: #004ba5;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #b6ebff;
+  --color-primary-fixed-dim: #47d6ff;
+  --color-on-primary-fixed: #001f28;
+  --color-on-primary-fixed-variant: #004e60;
+  --color-secondary-fixed: #f0dbff;
+  --color-secondary-fixed-dim: #ddb7ff;
+  --color-on-secondary-fixed: #2c0051;
+  --color-on-secondary-fixed-variant: #6900b3;
+  --color-tertiary-fixed: #d8e2ff;
+  --color-tertiary-fixed-dim: #adc6ff;
+  --color-on-tertiary-fixed: #001a42;
+  --color-on-tertiary-fixed-variant: #004395;
+  --color-background: #11131d;
+  --color-on-background: #e1e1f1;
+  --color-surface-variant: #323440;
+
+  /* ── Tipografia ────────────────────────────────────────── */
+  /* A escala padrão do Tailwind (text-sm, text-lg...) é removida. */
+  --text-*: initial;
+
+  --text-display: 56px;
+  --text-display--line-height: 64px;
+  --text-display--font-weight: 800;
+  --text-display-mobile: 36px;
+  --text-display-mobile--line-height: 44px;
+  --text-display-mobile--font-weight: 800;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--font-weight: 700;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--font-weight: 700;
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--font-weight: 500;
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--font-weight: 500;
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--font-weight: 400;
+
+  /* ── Raios ─────────────────────────────────────────────── */
+  --radius-*: initial;
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Espaçamento (somam-se à escala numérica do Tailwind) ── */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2.5rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-section: 5rem;
+
+  /* ── Layout ────────────────────────────────────────────── */
+  --container-content: 1280px;
+
+  /* ── Elevação ──────────────────────────────────────────── */
+  --shadow-glow: 0 8px 32px -4px rgb(0 210 255 / 0.12), 0 0 16px -2px rgb(168 85 247 / 0.12);
+  --shadow-glow-cyan: 0 0 20px rgb(0 210 255 / 0.4);
+  --shadow-glow-violet: 0 0 24px -4px rgb(168 85 247 / 0.35);
+  --shadow-float: 0 20px 40px rgb(0 0 0 / 0.6);
+  --shadow-focus: 0 0 0 3px rgb(0 210 255 / 0.15);
+
+  --blur-glass: 12px;
+  --blur-card: 16px;
+  --blur-nav: 20px;
+}
+
+/* Fontes carregadas por next/font no layout (variáveis definidas no <html>). */
+@theme inline {
+  --font-sans: var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* ── Utilities compostas ──────────────────────────────────── */
+
+/** Gradiente espectral da marca: ciano → azul → violeta. */
+@utility bg-gradient-brand {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-brand-cyan),
+    var(--color-brand-blue),
+    var(--color-brand-violet)
+  );
+}
+
+@utility text-gradient-brand {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-brand-cyan),
+    var(--color-brand-blue),
+    var(--color-brand-violet)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/** Nível 1 — superfície de vidro (cards). */
+@utility surface-glass {
+  background-color: color-mix(in srgb, var(--color-card) 80%, transparent);
+  backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--color-border);
+}
+
+/** Nível 3 — navegação e modais flutuantes. */
+@utility surface-float {
+  background-color: rgb(13 17 29 / 0.75);
+  backdrop-filter: blur(var(--blur-nav));
+  box-shadow: var(--shadow-float);
+  border: 1px solid var(--color-border);
+}

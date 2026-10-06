@@ -1,0 +1,12 @@
+export { AboutSection } from './AboutSection/AboutSection';
+export type { AboutSectionProps } from './AboutSection/AboutSection';
+export { ContactSection } from './ContactSection/ContactSection';
+export type { ContactSectionProps } from './ContactSection/ContactSection';
+export { EducationSection } from './EducationSection/EducationSection';
+export type { EducationSectionProps } from './EducationSection/EducationSection';
+export { HeroSection } from './HeroSection/HeroSection';
+export type { HeroSectionProps } from './HeroSection/HeroSection';
+export { ProjectsSection } from './ProjectsSection/ProjectsSection';
+export type { ProjectsSectionProps } from './ProjectsSection/ProjectsSection';
+export { SectionHeader } from './SectionHeader/SectionHeader';
+export type { SectionHeaderProps } from './SectionHeader/SectionHeader';

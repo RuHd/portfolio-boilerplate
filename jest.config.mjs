@@ -1,15 +1,22 @@
 import nextJest from 'next/jest.js';
 
-// O next/jest já configura quase tudo para o Jest entender um projeto Next.js.
+// next/jest configura o SWC, mocks de CSS/imagens/next/font e carrega o .env.
 const createJestConfig = nextJest({ dir: './' });
 
+/** @type {import('jest').Config} */
 const config = {
-  // Simula um navegador para os testes de componentes.
   testEnvironment: 'jsdom',
-  // Arquivo que roda antes de cada teste.
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  // Faz o Jest entender imports com "@/", ex.: '@/components/Button'.
-  moduleNameMapper: { '^@/(.*)$': '<rootDir>/src/$1' },
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  coverageProvider: 'v8',
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/index.ts',
+    '!src/app/**',
+  ],
 };
 
 export default createJestConfig(config);

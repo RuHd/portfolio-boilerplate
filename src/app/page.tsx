@@ -1,38 +1,33 @@
-import { Button } from "@/components/Button";
+import {
+  AboutSection,
+  ContactSection,
+  EducationSection,
+  HeroSection,
+  ProjectsSection,
+} from '@/components/sections';
+import { siteConfig } from '@/config/site';
+import { contactChannels, education, profile, projects, skills } from '@/content';
 
-export default function Home() {
+/**
+ * Página única da SPA. Só compõe seções: o conteúdo vem de src/content
+ * e a aparência dos componentes. Navegação entre seções por âncoras (#id).
+ *
+ * A página tem exatamente um <h1> (dentro do HeroSection).
+ */
+export default function HomePage() {
   return (
-    <main>
-      {/* Monte as seções da landing page aqui. */}
-      <header>
-          <nav>
-              <Button>
-                Portfolio
-              </Button>
-              <Button>
-                Conhecimentos
-              </Button>
-              <Button>
-                Contato
-              </Button>
-          </nav>
-      </header>
-      <section aria-label="hero-page">
-        <p>Usando a tecnologia para realizar os seus desejos.</p>
-      </section>
-      <section aria-label="portfolio">
-
-      </section>
-      <section aria-label="tecnologias">
-
-      </section>
-      <section arial-label="contato">
-
-      </section>
-      <footer>
-        <span>GenieCode - Todos os direitos reservados</span>
-        <span>Email: ruaan.ram@gmail.com</span>
-      </footer>
-    </main>
+    <>
+      <HeroSection
+        profile={profile}
+        name={siteConfig.author.name}
+        skills={skills}
+        primaryCta={{ label: 'Ver projetos', href: '#projetos' }}
+        secondaryCta={{ label: 'Entrar em contato', href: '#contato' }}
+      />
+      <AboutSection paragraphs={profile.about} skills={skills} />
+      <ProjectsSection projects={projects} />
+      <EducationSection items={education} />
+      <ContactSection channels={contactChannels} />
+    </>
   );
 }
